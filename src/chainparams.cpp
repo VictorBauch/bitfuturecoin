@@ -46,7 +46,7 @@ public:
         //     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d0104455468652054696d65732030332f4a616e2f32303039204368616e63656c6c6f72206f6e206272696e6b206f66207365636f6e64206261696c6f757420666f722062616e6b73)
         //     CTxOut(nValue=50.00000000, scriptPubKey=0x5F1DF16B2B704C8A578D0B)
         //   vMerkleTree: 4a5e1e
-        const char* pszTimestamp = "15102018";
+        const char* pszTimestamp = "1542819412";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -57,9 +57,9 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1542068461;
+        genesis.nTime    = 1542819412;
         genesis.nBits    = 0x1d00ffff;
-        genesis.nNonce   = 3351715942;
+        genesis.nNonce   = 3307019144;
 
         hashGenesisBlock = genesis.GetHash();
                     
@@ -96,11 +96,11 @@ public:
             exit(1);
         }
         
-        assert(hashGenesisBlock == uint256("0x00000000a7134c255e583e7a075a27072faeb989d592ef394e15cde0ce7b5b9a"));
-        assert(genesis.hashMerkleRoot == uint256("0xb1cadc7e5c10af031c79bf02c6489c27a74d8b009d37272bd2be6ae8f2a0fd90"));
+        assert(hashGenesisBlock == uint256("0x00000000b6ac46bf007306e7e43abd92456cf93be052a5f843708378087beaf2"));
+        assert(genesis.hashMerkleRoot == uint256("0x0243894e6dcd380fde565279c7521e6e28ae7fe35c519a99979c9b28ad2d888f"));
 
         vSeeds.push_back(CDNSSeedData("167.179.68.42", "167.179.68.42"));
-		vSeeds.push_back(CDNSSeedData("178.128.166.98", "178.128.166.98"));
+		vSeeds.push_back(CDNSSeedData("207.180.199.47", "207.180.199.47"));
 		vSeeds.push_back(CDNSSeedData("185.223.30.226", "185.223.30.226"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,25);
@@ -157,10 +157,10 @@ public:
         strDataDir = "testnet3";
 
         // Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime    = 1542068461;
-        genesis.nNonce   = 3351715942;
+        genesis.nTime    = 1542819412;
+        genesis.nNonce   = 3307019144;
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000000a7134c255e583e7a075a27072faeb989d592ef394e15cde0ce7b5b9a"));
+        assert(hashGenesisBlock == uint256("0x00000000b6ac46bf007306e7e43abd92456cf93be052a5f843708378087beaf2"));
 
         vFixedSeeds.clear();
         vSeeds.clear();

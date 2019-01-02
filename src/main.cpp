@@ -1284,45 +1284,61 @@ int64 GetBlockValue(int nHeight, int64 nFees)
             {
             nSubsidy = 1000000000 * COIN;
             }
-			else if (nHeight > 1 && nHeight <= 100000)
+			else if (nHeight > 1 && nHeight <= 40000)
 			{
-			nSubsidy = 500 * COIN; 
+			nSubsidy = 0.1 * COIN; 
 			}
-			else if (nHeight > 100000 && nHeight <= 200000)
+			else if (nHeight > 40000 && nHeight <= 100000)
 			{
-			nSubsidy = 250 * COIN; 
+			nSubsidy = 20 * COIN; 
 			}
-			else if (nHeight > 200000 && nHeight <= 300000)
+			else if (nHeight > 100000 && nHeight <= 150000)
 			{
-			nSubsidy = 125 * COIN; 
+			nSubsidy = 30 * COIN; 
 			}
-			else if (nHeight > 300000 && nHeight <= 400000)
+			else if (nHeight > 150000 && nHeight <= 300000)
 			{
-			nSubsidy = 62.5 * COIN; 
+			nSubsidy = 25 * COIN; 
 			}
-			else if (nHeight > 400000 && nHeight <= 500000)
+			else if (nHeight > 300000 && nHeight <= 350000)
 			{
-			nSubsidy = 31.25 * COIN; 
+			nSubsidy = 24 * COIN; 
 			}
-			else if (nHeight > 500000 && nHeight <= 600000)
+			else if (nHeight > 350000 && nHeight <= 400000)
 			{
-			nSubsidy = 15.625 * COIN; 
+			nSubsidy = 23 * COIN; 
 			}
-			else if (nHeight > 600000 && nHeight <= 700000)
+			else if (nHeight > 400000 && nHeight <= 450000)
 			{
-			nSubsidy = 7.8125 * COIN; 
+			nSubsidy = 22 * COIN; 
 			}
-			else if (nHeight > 700000 && nHeight <= 800000)
+			else if (nHeight > 450000 && nHeight <= 500000)
 			{
-			nSubsidy = 3.90625 * COIN; 
+			nSubsidy = 21 * COIN; 
 			}
-			else if (nHeight > 800000 && nHeight <= 900000)
+			else if (nHeight > 500000 && nHeight <= 550000)
 			{
-			nSubsidy = 1.953125 * COIN; 
+			nSubsidy = 20 * COIN; 
+			}
+			else if (nHeight > 550000 && nHeight <= 600000)
+			{
+			nSubsidy = 19 * COIN; 
+			}
+			else if (nHeight > 600000 && nHeight <= 650000)
+			{
+			nSubsidy = 18 * COIN; 
+			}
+			else if (nHeight > 650000 && nHeight <= 700000)
+			{
+			nSubsidy = 17 * COIN; 
+			}
+			else if (nHeight > 700000 && nHeight <= 750000)
+			{
+			nSubsidy = 16 * COIN; 
 			}
 			else
 			{
-			nSubsidy = 1 * COIN; 
+			nSubsidy = 15 * COIN; 
 			}
 
     // Subsidy is cut in half every 400000 blocks
@@ -1332,7 +1348,7 @@ int64 GetBlockValue(int nHeight, int64 nFees)
 }
 
 static const int64 nTargetTimespan = 10 * 60;
-static const int64 nTargetSpacing = 1 * 60;
+static const int64 nTargetSpacing = 2 * 60;
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 //
